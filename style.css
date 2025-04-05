@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.leftdiv ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-family: "Teko", sans-serif;
+    font-size: 20px;
+}
+
+.leftdiv ul li a {
+    color: #000;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.leftdiv ul li button  {
+    border: none;
+    font-size: 1.8rem;
+    border-radius: 50%;
+    cursor: pointer;
+    background:#fff;
+}
+
+.leftdiv ul li a:hover {
+    color: #007bff;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0px 8px 15px blue;
+}
+
+/* Adds spacing between menu items */
+.leftdiv ul li:not(:first-child) {
+    padding-left: 20px;
+}
+
+/* Navbar Right Section */
+.rightdiv {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* Spacing between image and text */
+}
+
+.rightdiv h1 {
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 3rem;
+    color: rgb(255, 123, 0);
+}
+
+/* Adjusts Image Size & Position */
+.rightdiv img {
+    height: 50px;
+    /* Fixed height */
+    width: 50px;
+    /* Ensures the image stays circular */
+    border-radius: 50%;
+    object-fit: cover;
+    /* Prevents distortion */
+    padding-right: 10px;
+}
+
+.main_content {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.leftdiv1 {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.content {
+    row-gap: 1rem;
+    display: flex;
+    align-content: flex-start;
+    flex-direction: column;
+}
+
+.content h1 {
+    font: 800;
+    font-size: 3rem;
+    padding-left: 2rem;
+}
+
+.content h1 span {
+    color: rgb(255, 123, 0);
+    ;
+}
+
+.content p {
+    font-weight: 500;
+    font-size: 1rem;
+    padding-left: 2rem;
+}
+
+.content button {
+    font: 200;
+    font-size: 1rem;
+    margin-left: 2rem;
+    padding: 0.5rem 1rem;
+    width: 10rem;
+    border-radius: 0.5rem;
+    border: none;
+    background: #000;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.rightdiv1 {
+    width: 40%;
+    height: 100%;
+
+}
+
+.rightdiv1 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 16rem 1rem 10rem 1rem;
+}
+
+.div {
+    margin-left: 5.8rem;
+}
+
+a i {
+    font-size: 2rem;
+    text-decoration: none;
+    color: black;
+    border-radius: 50%;
+}
+
+
+@media(max-width:840px) {
+    .main_content {
+        flex-direction: column;
+    }
+
+    .rightdiv1 {
+        margin-top: 1.2rem;
+    }
+
+    #nav {
+        flex-direction: column;
+    }
+
+    .div {
+        margin-top: 4rem;
+    }
+}
+
+@media(max-width:420px) {
+    .leftdiv ul {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.8rem;
+    }
+}
+
+
+body {
+    transition: background-color 0.8s ease-in-out;
+}
+ /* dark theme */
+body.dark_theme{
+    background: #000;
+}
+body.dark_theme #btn i{
+  background: #000;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  border: 8px solid black;
+}
+body.dark_theme i,
+body.dark_theme ul li a,
+body.dark_theme .content h1,
+body.dark_theme .content p {
+    color: white;
+}
+
+.dark_theme .content button{
+    color: #000;
+    background: #fff;
+}
